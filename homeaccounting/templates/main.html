@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+    <thead>
+    <tr>
+        <th>Дата операции</th>
+        <th>Наименоваие операции</th>
+        <th>Код счета Дт</th>
+        <th>Сумма</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for operations in latest_oper %}
+    <tr>
+        <td>{{ operations.dateOper }}</td>
+        <td>{{ operations.nameOper }}</td>
+        <td>{{ operations.accDtOper.accountCode }}</td>
+        <td>{{ operations.sumOper }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock %}
