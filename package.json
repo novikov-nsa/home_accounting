@@ -1,0 +1,22 @@
+{
+  "name": "home_accounting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novikov-nsa/home_accounting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/novikov-nsa/home_accounting/issues"
+  },
+  "homepage": "https://github.com/novikov-nsa/home_accounting",
+  "dependencies": {
+    "angular": "^1.6.6"
+  }
+}

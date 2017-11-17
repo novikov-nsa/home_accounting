@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from homeaccounting.api import OperationsResource
+
+operations_resources = OperationsResource()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('homeaccounting.urls')),
+    url(r'^api/', include(operations_resources.urls)),
 ]
