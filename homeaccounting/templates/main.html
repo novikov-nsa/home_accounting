@@ -3,25 +3,27 @@
 <table>
     <thead>
     <tr>
-        <th>Дата операции</th>
-        <th>Наименоваие операции</th>
+        <th>Дата</th>
+        <th>Сумма на дату</th>
+        <!--<th>Наименоваие операции</th>
         <th>Код счета Дт</th>
         <th>Наименование счета Дт</th>
         <th>Код счета Кт</th>
         <th>Наименование счета Кт</th>
-        <th>Сумма</th>
+        <th>Сумма</th> -->
     </tr>
     </thead>
     <tbody>
     {% for operations in latest_oper %}
     <tr>
         <td>{{ operations.dateOper }}</td>
-        <td>{{ operations.nameOper }}</td>
-        <td>{{ operations.accDtOper.accountCode }}</td>
-        <td>{{ operations.accDtOper.accountName }}</td>
-        <td>{{ operations.accKtOper.accountCode }}</td>
-        <td>{{ operations.accKtOper.accountName }}</td>
-        <td>{{ operations.sumOper }}</td>
+        <td>{{ operations.sum_on_date }}</td>
+     <!--   <td>{{ operations.nameOper }}</td>
+        <td>{{ operations.accDtOper__accountCode }}</td>
+        <td>{{ operations.accDtOper__accountName }}</td>
+        <td>{{ operations.accKtOper__accountCode }}</td>
+        <td>{{ operations.accKtOper__accountName }}</td>
+        <td>{{ operations.sumOper }}</td> -->
     </tr>
     {% endfor %}
     </tbody>

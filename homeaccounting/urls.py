@@ -1,9 +1,10 @@
 from django.conf.urls import url
+from django.views.generic import TemplateView
 
-from . import views
+from .views import MainView
 
 
 urlpatterns = [
-    url(r'^$', views.main_app, name='main_app'),
+    url(r'^$', MainView.as_view()),
 
 ]
