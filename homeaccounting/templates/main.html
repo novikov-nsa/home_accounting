@@ -3,8 +3,8 @@
 <table>
     <thead>
     <tr>
-        <th>Дата</th>
-        <th>Сумма на дату</th>
+        <!-- <th>Дата</th>
+        <th>Сумма на дату</th> -->
         <!--<th>Наименоваие операции</th>
         <th>Код счета Дт</th>
         <th>Наименование счета Дт</th>
@@ -14,16 +14,22 @@
     </tr>
     </thead>
     <tbody>
-    {% for operations in latest_oper %}
+    {% for operations_date in latest_oper %}
     <tr>
-        <td>{{ operations.dateOper }}</td>
-        <td>{{ operations.sum_on_date }}</td>
-     <!--   <td>{{ operations.nameOper }}</td>
-        <td>{{ operations.accDtOper__accountCode }}</td>
+        <td><b>{{ operations_date.dateOper }}</b></td>
+        <td><b>{{ operations_date.sum_on_date }}</b></td>
+        {% for operations in list_oper_to_date %}
+        <tr>
+        {% if operations.dateOper == operations_date.dateOper %}
+        <td>{{ operations.nameOper }}</td>
+        <!-- <td>{{ operations.accDtOper__accountCode }}</td>
         <td>{{ operations.accDtOper__accountName }}</td>
         <td>{{ operations.accKtOper__accountCode }}</td>
-        <td>{{ operations.accKtOper__accountName }}</td>
-        <td>{{ operations.sumOper }}</td> -->
+        <td>{{ operations.accKtOper__accountName }}</td> -->
+        <td>{{ operations.sumOper }}</td>
+        {% endif %}
+        </tr>
+        {% endfor %}
     </tr>
     {% endfor %}
     </tbody>
