@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<a href="/new/">Новый документ</a>
 <table>
     <thead>
     <tr>
@@ -13,8 +14,10 @@
         <th>Сумма</th> -->
     </tr>
     </thead>
+
     <tbody>
     {% for operations_date in latest_oper %}
+
     <tr>
         <td><b>{{ operations_date.dateOper }}</b></td>
         <td><b>{{ operations_date.sum_on_date }}</b></td>

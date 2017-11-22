@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 
@@ -41,6 +42,9 @@ class Operations(models.Model): #операции
     accDtOper = models.ForeignKey(AccountsOrg, related_name="account_dt")
     accKtOper = models.ForeignKey(AccountsOrg, related_name="account_kt")
     sumOper = models.DecimalField(max_digits=20, decimal_places=2)
+
+    def get_absolute_url(self):
+        return reverse('main-view')
 
 
 

@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from .models import Accounts, Orginfo, Operations
 from django.db.models import Sum
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView, CreateView
 import datetime
+from .forms import NewDocForm
 
 # Create your views here.
 class MainView(TemplateView):
@@ -20,3 +21,9 @@ class MainView(TemplateView):
 
         context = {'latest_oper': latest_oper, 'list_oper_to_date':list_oper_to_date}
         return render(request, template_name, context)
+
+class NewDocFormView(CreateView):
+    template_name = 'new_doc.html'
+    #form_class = NewDocForm
+    model = Operations
+    fields = ['dateOper', 'nameOper', 'sumOper', 'accDtOper', 'accKtOper', 'org']
