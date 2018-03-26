@@ -3,15 +3,14 @@
 Новый документ
 <a href = "/">Назад</a>
 <form action="" method="post">{% csrf_token %}
-    <label>Дата операции:</label>
-    {{ form.dateOper }}
-    <p><label>Наименование операции:</label>
-    {{ form.nameOper }}
-    <p><label>Сумма операции:</label>
-    {{ form.sumOper }}
-        <p>{{ form.accDtOper }}
-        <p>{{ form.accKtOper }}
-        <p>{{ form.org }}
+    <table>
+        <tr><td><label>Дата операции:</label></td><td><input id="dateOper" type="date" value={{ form.dateOper }} </td></tr>
+        <tr><td><label>Наименование операции:</label></td><td>{{ form.nameOper }}</td></tr>
+        <tr><td><label>Сумма операции:</label></td><td>{{ form.sumOper }}</td></tr>
+        <tr><td><label>Счет Дт:</label></td><td>{{ form.accDtOper }}</td></tr>
+        <tr><td><label>Счет Кт:</label></td><td>{{ form.accKtOper }}</td></tr>
+        <tr><td><label>Организация:</label></td><td>{{ form.org }}</td></tr>
+    </table>
     <p><input type="submit" value="Create" />
 </form>
 {% endblock %}

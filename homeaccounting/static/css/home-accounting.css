@@ -1,0 +1,32 @@
+td.number-cell {
+text-align: right;
+}
+th.header-number {
+text-align: right;
+}
+.navbar{
+ background:#8FBC8F;
+}
+.nav-link , .navbar-brand{
+ color: #f4f4f4;
+ cursor: pointer;
+}
+.nav-link{
+ margin-right: 1em !important;
+}
+.nav-link:hover{
+ background: #5F9EA0;
+ color: #000000;
+}
+.navbar-collapse{
+ justify-content: flex-end;
+}
+.navbar-toggler{
+  background:#fff !important;
+}
+.navbar-ligth{
+background-color:#8FBC8F;
+}
+.bg-primary{
+background-color:#343a40 !important;
+}
